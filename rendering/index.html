@@ -8,31 +8,46 @@
 	<body>
 		<div class="row">
 			<div class="column">
-				<div class="top-row">
+				<div class="top-row" style="background-color: black; margin: 0px; color: white; padding-top: 25px;">
 					<h1 id="label"></h1>
 				  </div>
-				<div id="container" style=""></div>
+				<div id="container"></div>
 			</div>	
 			<div class="column">
 				<div class="top-row">
-					<h1> ‎ </h1>
+					<h1> File-to-Sign </h1>
 				  </div>
 				<form method="POST" action="/" enctype="multipart/form-data">
-					<!-- make this prettier -->
-					<input type="file" button class="button-3" accept=".wav, .mp3">
-					<input type="submit" button class="button-3" value="Upload and Transcribe">
+					<div class="row">
+						<div class="column2">
+							<input type="file" button class="button-3 full" accept=".wav, .mp3">
+						</div>	
+						<div class="column2">
+							<input type="submit" button class="button-3 full" value="Upload and Transcribe">
+						</div>	
+					</div>
+					<br>
+
+					<textarea rows="10" cols="90" id="clean_transcript" readonly>{{ clean_transcript }}</textarea>
 					
+					<script>
+					  // Update the clean transcript textarea with the response from the server
+					  var cleanTranscriptTextarea = document.getElementById('clean_transcript');
+					  cleanTranscriptTextarea.value = `{{ clean_transcript|safe }}`;
+					</script>
+				<div class="top-row">
+					<h1> Text-to-Sign </h1>
+					</div>
 				</form>
 				<form id="inputForm">
 					<br>
-					<textarea id="message" name="message" rows="20" cols="80"></textarea>
+					<textarea id="message" name="message" rows="10" cols="90"></textarea>
 					<br> <br>
-					<input type="submit" button class="button-3" value="Submit">
+					<input type="submit" button class="button-3 full" value="Submit">
 				</form>
 			</div>
 		</div>
 		
-
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
