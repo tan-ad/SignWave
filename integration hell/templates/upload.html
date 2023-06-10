@@ -14,7 +14,7 @@
     
     <script>
       // Update the clean transcript textarea with the response from the server
-      const cleanTranscriptTextarea = document.getElementById('clean_transcript');
+      var cleanTranscriptTextarea = document.getElementById('clean_transcript');
       cleanTranscriptTextarea.value = `{{ clean_transcript|safe }}`;
     </script>
   </body>
