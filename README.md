@@ -2,7 +2,7 @@
 
 ## Inspiration
 
-There have been several high profile instances where supposed "sign language interpreters" have gone on live TV as translators, only to make nonsensical hand motions and embarass the news stations. We saw this and thought, wouldn't this be easily avoided in the future by automating translation to sign language, similar to closed captions on videos? As a result, we have created SpeechToSign. 
+Given how much society has advanced technologically, the face that there still isn't enough attention given towards making communication more accesible towards the deaf community is inexcusable. One of our teammate spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SpeechToSign. 
 
 
 ## What it does and how it can be used
