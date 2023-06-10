@@ -1,21 +1,31 @@
 import * as THREE from 'three';
 
+var label = document.getElementById("label")
+
+var container = document.getElementById("container");
+const fov = 75;
+const aspect = container.clientWidth / container.clientHeight;
+const near = 0.1;
+const far = 1000;
+
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 ); //params: field of view, aspect ratio, near clipping plane, far clipping plane
+const camera = new THREE.PerspectiveCamera(fov, aspect, near, far); //params: field of view, aspect ratio, near clipping plane, far clipping plane
 
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
 
-fetch('reference4.json')
+fetch('reference4.json') //fetches json data (very slow)
     .then(response => response.json())
     .then(data => { 
-        const word = "smoke";
+        const wordList = ["smoke", "canadian", "about", "all", "right"]
+        var wordidx = 0;
+        label.innerHTML = wordList[wordidx];
 
         function drawPoint(x, y, z){
             const pointRadius = 0.25;
             const geometry = new THREE.SphereGeometry( pointRadius, 32, 16 );
-            const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
+            const material = new THREE.MeshBasicMaterial( { color: 0x008000 } );
             const sphere = new THREE.Mesh( geometry, material ); scene.add(sphere);
             sphere.position.x = x;
             sphere.position.y = y;
@@ -27,7 +37,7 @@ fetch('reference4.json')
             points.push (new THREE.Vector3(x1, y1, z1));
             points.push (new THREE.Vector3(x2, y2, z2));
             const geometry = new THREE.BufferGeometry().setFromPoints( points );
-            const material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+            const material = new THREE.LineBasicMaterial( { color: 0xff0000 } );
             const line = new THREE.Line( geometry, material );
             scene.add(line);
         }
@@ -44,8 +54,8 @@ fetch('reference4.json')
 
         function connectLines(frameidx){
             const edgeList = [[0,1],[1,2], [2,3], [3,4], [0,5], [5,6], [6,7], [7,8], [5,9], [9,10], [10,11], [11,12], [9,13], [13,14], [14,15], [15,16], [13,17], [17,18], [18,19], [19,20], [0,17]];
-            var left = data[word][frameidx]['Left Hand Coordinates'];
-            var right = data[word][frameidx]['Right Hand Coordinates'];
+            var left = data[wordList[wordidx]][frameidx]['Left Hand Coordinates'];
+            var right = data[wordList[wordidx]][frameidx]['Right Hand Coordinates'];
 
             redistributeElements(left, right);
             
@@ -68,27 +78,30 @@ fetch('reference4.json')
         var frameidx = 0;
         function render() {
             requestAnimationFrame(render);
-            //console.log(frameidx)
 
-            data[word][frameidx]['Left Hand Coordinates'].forEach(function(joint) { 
+            var left = data[wordList[wordidx]][frameidx]['Left Hand Coordinates'];
+            var right = data[wordList[wordidx]][frameidx]['Right Hand Coordinates'];
+
+            left.forEach(function(joint) { 
                 drawPoint(joint['Coordinates'][0]*50, joint['Coordinates'][1]*-50, joint['Coordinates'][2]*50);
             })
-            data[word][frameidx]['Right Hand Coordinates'].forEach(function(joint) {
+            right.forEach(function(joint) {
                 drawPoint(joint['Coordinates'][0]*50, joint['Coordinates'][1]*-50, joint['Coordinates'][2]*50);
             })
-
             connectLines(frameidx);
 
             renderer.render(scene, camera);
             scene.remove.apply(scene, scene.children);
 
             frameidx++;
-            if(frameidx >= data[word].length){
+            if(frameidx >= data[wordList[wordidx]].length){
                 frameidx = 0;
+                wordidx = (wordidx + 1)%wordList.length;
+                label.innerHTML = wordList[wordidx];
             }
         }
         
         render();
     })
 
-camera.position.set(25, -35, 25);
+camera.position.set(27.5, -35, 25);

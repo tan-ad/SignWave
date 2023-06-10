@@ -3,11 +3,28 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
+		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
+		<div class="top-row">
+			<h1 id="label">N/A</h1>
+		  </div>
+		<div class="row">
+			<div class="column">
+				<div id="container"></div>
+			</div>
+			<div class="column">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis in ultricies urna, id venenatis mi. Morbi justo tortor, finibus eu finibus vel, auctor non quam. Curabitur massa ipsum, venenatis sit amet eros ac, semper varius tellus. Nullam scelerisque, lectus et rutrum placerat, lacus risus maximus augue, in dictum felis nisl nec massa. Nullam pulvinar ac libero sed dignissim. Integer vulputate eget nunc quis feugiat. Aenean at est ut quam rhoncus feugiat ut eu lacus. Sed iaculis sem quam, ut mattis nisl auctor et. Phasellus at augue quis erat gravida finibus at vitae turpis.				</p>
+				<form id="textArea">
+					<br>
+					<textarea id="message" name="message" rows="5" cols="80"></textarea>
+					<br> <br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
+		
+
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>

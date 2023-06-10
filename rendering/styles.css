@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    height: 750px;
+}
+
+.top-row {
+    text-align: center;
+    margin: 5px;
+}
+
+#container {
+    height: 75%;
+    background-color: lightgray;
+}
