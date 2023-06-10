@@ -6,24 +6,28 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<div class="top-row">
-			<h1 id="label"></h1>
-		  </div>
 		<div class="row">
 			<div class="column">
-				<div id="container"></div>
-			</div>
+				<div class="top-row">
+					<h1 id="label"></h1>
+				  </div>
+				<div id="container" style=""></div>
+			</div>	
 			<div class="column">
+				<div class="top-row">
+					<h1> ‎ </h1>
+				  </div>
 				<form method="POST" action="/" enctype="multipart/form-data">
-					<input type="file" name="file" accept=".wav, .mp3">
-					<br>
-					<input type="submit" value="Upload and Transcribe">
+					<!-- make this prettier -->
+					<input type="file" button class="button-3" accept=".wav, .mp3">
+					<input type="submit" button class="button-3" value="Upload and Transcribe">
+					
 				</form>
 				<form id="inputForm">
 					<br>
 					<textarea id="message" name="message" rows="20" cols="80"></textarea>
 					<br> <br>
-					<input type="submit" value="Submit">
+					<input type="submit" button class="button-3" value="Submit">
 				</form>
 			</div>
 		</div>
@@ -32,3 +36,5 @@
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
+
+
