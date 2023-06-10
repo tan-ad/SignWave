@@ -9,19 +9,28 @@ const near = 0.1;
 const far = 1000;
 
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(fov, aspect, near, far); //params: field of view, aspect ratio, near clipping plane, far clipping plane
+const camera = new THREE.PerspectiveCamera(fov, aspect, near, far); 
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(container.clientWidth, container.clientHeight);
 container.appendChild(renderer.domElement);
 
+var wordList = []
+var wordidx = 0;
+label.innerHTML = wordList[wordidx];
+
+var textForm = document.getElementById("inputForm");
+textForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    var message = document.getElementById("message").value;
+    wordList = message.split(" ");
+    wordidx = 0;
+    console.log(wordList);
+});
+
 fetch('reference4.json') //fetches json data (very slow)
     .then(response => response.json())
     .then(data => { 
-        const wordList = ["smoke", "canadian", "about", "all", "right"]
-        var wordidx = 0;
-        label.innerHTML = wordList[wordidx];
-
         function drawPoint(x, y, z){
             const pointRadius = 0.25;
             const geometry = new THREE.SphereGeometry( pointRadius, 32, 16 );
@@ -42,7 +51,7 @@ fetch('reference4.json') //fetches json data (very slow)
             scene.add(line);
         }
 
-        function redistributeElements(left, right) { //fixes the problem where more than 21 are identified as left and lets the lines be drawn properly 
+        function redistributeElements(left, right) { //fixes the problem where more than 21 nodes are identified as left and lets the lines be drawn properly 
             if (left.length > 21) {
                 const redistributedElements = left.splice(21);
                 right.push(...redistributedElements);
@@ -104,4 +113,4 @@ fetch('reference4.json') //fetches json data (very slow)
         render();
     })
 
-camera.position.set(27.5, -35, 25);
+camera.position.set(27.5, -30, 25);
