@@ -28,7 +28,7 @@ textForm.addEventListener("submit", function(e) {
     console.log(wordList);
 });
 
-fetch('reference4.json') //fetches json data (very slow)
+fetch('reference.json') //fetches json data (very slow)
     .then(response => response.json())
     .then(data => { 
         function drawPoint(x, y, z){
