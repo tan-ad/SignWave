@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Speech to Sign</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename= 'js/postHandler.js') }}"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="column">
+			<div class="top-row" style="background-color: black; margin: 0px; color: white; padding-top: 25px;">
+				<h1 id="label"></h1>
+			</div>
+			<div id="container"></div>
+		</div>
+		<div class="column">
+			<div class="top-row">
+				<h1> File-to-Sign </h1>
+			</div>
+
+			<form id="fileForm">
+				<div class="row">
+					<div class="column2">
+						<input type="file" name="file" button class="button-3 full" accept=".wav, .mp3">
+					</div>
+					<div class="column2">
+						<input type="submit" button class="button-3 full" value="Upload and Transcribe">
+					</div>
+				</div>
+			</form>
+			<textarea rows="10" cols="90" id="display" readonly></textarea>
+
+			<div class="top-row">
+				<h1> Text-to-Sign </h1>
+			</div>
+
+			<form id="inputForm">
+				<br>
+				<textarea id="message" name="message" rows="10" cols="90"></textarea>
+				<br> <br>
+				<input type="submit" button class="button-3 full" value="Submit">
+			</form>
+		</div>
+	</div>
+
+	<script type="module" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
+</body>
+
+</html>
