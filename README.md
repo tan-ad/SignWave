@@ -14,7 +14,7 @@ Given how much society has advanced technologically, the fact that there still i
 
 ## What it does and how it can be used
 
-SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given and presents an animation of the transcript in sign language and continues to the next step. When a text input is given, the process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed captions, SignWave also extends as an educational tool. Those looking to learn sign language can use SpeechToSign to teach themselves how to sign various phrases using both the speech-to-sign and text-to-sign functionalities. 
+SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given and presents an animation of the transcript in sign language and continues to the next step. When a text input is given, the process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed captions, SignWave also extends as an educational tool. Those looking to learn sign language can use SignWave to teach themselves how to sign various phrases using both the speech-to-sign and text-to-sign functionalities. 
 
 
 ## Installation
