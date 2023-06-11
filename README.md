@@ -1,5 +1,7 @@
 # SpeechToSign
 
+An easy-to-use program that transcribes text or audio files into a sign language animation.
+
 ## Inspiration
 
 Given how much society has advanced technologically, the fact that there still isn't enough attention given towards making communication more accesible towards the deaf community is inexcusable. One of our teammate spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SpeechToSign, an accessible and convenient translator from English to American Sign Language (ASL). 
@@ -26,13 +28,30 @@ We used OpenAI's Whisper API to recognize and convert speech to text. Once in te
 
 ## Challenges we ran into
 
-* Geting the hold of using Git, including ```push``` and ```pull``` commits
+* The team was almost completely new to Git, so we had to learn to use Git commands, such as add, commit, push, and pull from scratch
 * Semantics: Not having the exact translation of every word in the ASL dictionary
 * Creating a model that uses both right and left hand, especially when their animations overlap
 * Making User Interface design smooth, accomodating both text and audio file inputs
 
 ## Accomplishments that we're proud of
 
+* Creating a 2d model that accurately maps the movements of both hands
+* Transcribing a .mp3 file into .txt, then mapping it to our dictionary of ASL videos
+* Accomidating both audio and text input
+* Creating a clean and easy-to-use UI
+
 ## What we learned
 
+* How to use OpenAI's Whisper API to convert speech to text
+* Using Python scripts to convert the .txt file into a list of unique strings
+* Using Google's MediaPipe Hand Landmarker to retried the coordinates of each hand
+* Using the ASL Dictionary to map each word to an array of coordinates
+* Using three.js to animate the set of points
+* Using HTML, CSS, JS, and Git to create a website and repository
+
 ## What's next for SpeechToSign
+* Adding sliders to allow users to control animation speed
+* Creating a model with more humanoid hands
+* Implementing a reverse translation function of ASL to English by using computer recognition and Machine Learning
+* Expanding it into commercial uses (eg. sign language interpreters in classroom, TV shows, etc)
+* We're excited to see where SignWave can go in the future 👋
