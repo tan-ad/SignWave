@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+
+body{
+  background-color: #253238;
+  color:#C0C0C0;
+  font-size: small;
+} 
+
+.flex-container{
+  display: flex;
+  height: 100vh;
+}
+
+.left-box {
+  flex: 1;
+  border-color: #C0C0C0;
+  border-width: 2px;
+  border-style: solid;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  flex: 1;
+  margin: 20px 20px 0px 0px; 
+  border-color: #C0C0C0;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.form-container{
+  display: flex;
+}
+
+.subsection {
+  flex: 1;
+}
+
+.box .title{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 20px;
+}
+
+#label{
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container{
+  flex: 1;
+  margin:50px;
+}
+
+button{
+  border-width: 2px;
+  border-style: solid;
+  border-color: #C0C0C0;
+  padding: 10px;
+  width: 250px;
+  font-weight: bold;
+  display:block;
+  margin-top: 20px;
+}
+button:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+label{
+  text-align: center;
+  background-color: #333333;
+  border-color: #C0C0C0;
+  color:#C0C0C0;
+  border-width: 3px;
+  border-style: solid;
+  padding: 10px;
+  width: 250px;
+  font-weight: bold;
+  display:block;
+  margin-top: 20px;
+  margin-left:auto;
+  margin-right: 10px;
+}
+label:hover {
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+}
+
+.dark{
+  background-color: #333333;
+  color:#C0C0C0;
+}
+
+.light{
+  background-color: #C0C0C0;
+  color:#333333;
+}
+
+#file-chosen{
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 10px;
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+#subtext{
+  color:#333333;
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 10px;
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+textarea{
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  width:520px;
+  height: 150px;
+  padding: 10px;
+}
+
+.socials{
+  text-decoration: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.foot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}

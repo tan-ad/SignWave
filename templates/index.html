@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>SignWave</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename= 'img/favicon.ico') }}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="{{ url_for('static', filename= 'js/postHandler.js') }}"></script>
+</head>
+
+<body>
+	<div class="flex-container">
+		<div class="left-box">
+			<h1 id="label">N/A</h1>
+			<div id="container"></div>
+		</div>
+		<div class="right-box">
+			<div class="box">
+				<div class="title">SPEECH 2 TEXT</div>
+				<form id="fileForm">
+					<div class="form-container">
+						<div class="subsection">
+							<input type="file" name="file" id="file-btn" accept=".wav, .mp3" hidden/> <!--hidden selector that links to another, well formatted, button-->
+							<label for="file-btn">
+								Choose File
+								<span id="file-chosen">No file selected</span>
+							</label>
+						</div>
+						<div class="subsection">
+							<button class ="light" type="submit" style="margin-left:10px; margin-right:auto">Transcribe
+								<span id="subtext">.mp3 or .wav</span>
+							</button>
+						</div>
+					</div>
+					<script>
+						const actualBtn = document.getElementById('file-btn');
+						const fileChosen = document.getElementById('file-chosen');
+						actualBtn.addEventListener('change', function(){
+						fileChosen.textContent = this.files[0].name
+						})
+					</script>
+				</form>
+				<textarea id="display" placeholder="Raw transcribed text will appear here."></textarea>
+			</div>
+			<div class="box" style="margin-bottom: 20px"> <!--janky way to make the margin spacing equal-->
+				<div class="title">TEXT 2 ASL</div>
+				<form id="inputForm">
+					<textarea id="message" name="message" placeholder="Enter the text to translate here!"></textarea>
+					<button class ="light" type="submit" style="margin-left: auto; margin-right:auto;">Submit</button>
+				</form>
+				<div class="foot">
+					<a href="https://github.com/tan-ad/SignWave" class = "socials"><img src = "static/img/github-icon.svg" style="width:20px;height:20px;"></img></a>
+					<a href="https://devpost.com/software/speechtosign" class = "socials"><img src = "static/img/devpost-icon.svg" style="width:20px;height:20px;"></img></a>
+					<!--<p style="font-size: 10px;">AG, RL, AT, JZ</p>-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<script type="module" src="{{ url_for('static', filename= 'js/main.js') }}"></script>
+</body>
+
+</html>
