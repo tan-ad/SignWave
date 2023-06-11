@@ -1,8 +1,8 @@
-# SignWave 👋
+# SignWave
 
 An easy-to-use program that transcribes text or audio files into a sign language animation.
 
-## Inspiration 
+## Inspiration
 
 Given how much society has advanced technologically, the fact that there still isn't enough attention given to making communication more accessible for the deaf community is inexcusable. One of our teammates spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SignWave, an accessible and convenient translator from English to American Sign Language (ASL). 
 
@@ -12,9 +12,17 @@ Given how much society has advanced technologically, the fact that there still i
 SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given and presents an animation of the transcript in sign language and continues to the next step. When a text input is given, the process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed captions, SignWave also extends as an educational tool. Those looking to learn sign language can use SpeechToSign to teach themselves how to sign various phrases using both the speech-to-sign and text-to-sign functionalities. 
 
 
-## Install
-* Clone the repository
-* Run the main ```index.html``` file
+## Installation
+Requirements: 
+* System: Python (3.11.4)
+* Speech-to-text: PyTorch (2.0.1), ffmpeg (6.0), openai-whisper (beta) 
+* Animation: NumPy (1.21.0),  mediapipe (0.8.9.1)
+* Misc: Flask (2.3.2), Levenstein (0.2.1), regex (2023.6.3), opencv-python (4.5.5.61)
+
+Instructions:
+1. Clone the repository
+2. Set up Python virtual environment and install required dependencies
+3. Run the main ```app.py``` file
 
 ## How we built it
 
@@ -35,7 +43,7 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 
 ## Accomplishments that we're proud of
 
-* Creating a 3D model that accurately maps the movements of both hands
+* Creating a 2d model that accurately maps the movements of both hands
 * Transcribing a .mp3 file into .txt, then mapping it to our dictionary of ASL videos
 * Accommodating both audio and text input
 * Creating a clean and easy-to-use UI
