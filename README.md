@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
 ![GitHub repo size](https://img.shields.io/github/repo-size/tan-ad/SignWave)
-![JamHacks7](https://img.shields.io/static/v1?label=<LABEL>&message=JamHacks7&color=blueviolet)
+![JamHacks7](https://img.shields.io/badge/event-JAMHacks%207-blueviolet)
 
 An easy-to-use program that transcribes text or audio files into a sign language animation.
 
