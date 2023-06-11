@@ -53,5 +53,5 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * Adding sliders to allow users to control animation speed
 * Creating a model with more humanoid hands
 * Implementing a reverse translation function of ASL to English by using computer recognition and Machine Learning
-* Expanding it into commercial uses (eg. sign language interpreters in classrooms, TV shows, etc)
+* Expanding it into commercial uses (eg. transcribing university lectures for deaf or hard-of-hearing students, captioning for TV shows, etc)
 * We're excited to see where SignWave can go in the future 👋
