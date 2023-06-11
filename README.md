@@ -26,9 +26,9 @@ Requirements:
 
 Instructions:
 1. Clone the repository
-2. Set up Python virtual environment 
-3. Install required dependencies
-4. Run ```python app.py``` 
+2. Set up Python virtual environment  (```python -m venv myenv```)
+4. Install required dependencies
+5. Run ```python app.py``` 
 
 ## How we built it
 
