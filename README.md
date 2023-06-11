@@ -4,12 +4,12 @@ An easy-to-use program that transcribes text or audio files into a sign language
 
 ## Inspiration
 
-Given how much society has advanced technologically, the fact that there still isn't enough attention given towards making communication more accesible towards the deaf community is inexcusable. One of our teammate spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SignWave, an accessible and convenient translator from English to American Sign Language (ASL). 
+Given how much society has advanced technologically, the fact that there still isn't enough attention given to making communication more accessible for the deaf community is inexcusable. One of our teammates spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SignWave, an accessible and convenient translator from English to American Sign Language (ASL). 
 
 
 ## What it does and how it can be used
 
-SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given, the above process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed caption, SignWave also extends as an educational tool. Those looking to learn sign language can use SignWave to teach themselves how to sign various phrases using the both the speech-to-sign and text-to-sign functionalities. 
+SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given and presents an animation of the transcript in sign language and continues to the next step. When a text input is given, the process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed captions, SignWave also extends as an educational tool. Those looking to learn sign language can use SpeechToSign to teach themselves how to sign various phrases using both the speech-to-sign and text-to-sign functionalities. 
 
 
 ## Install
@@ -31,13 +31,13 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * The team was almost completely new to Git, so we had to learn to use Git commands, such as add, commit, push, and pull from scratch
 * Semantics: Not having the exact translation of every word in the ASL dictionary
 * Creating a model that uses both right and left hand, especially when their animations overlap
-* Making User Interface design smooth, accomodating both text and audio file inputs
+* Making User Interface design smooth, accommodating both text and audio file inputs
 
 ## Accomplishments that we're proud of
 
 * Creating a 2d model that accurately maps the movements of both hands
 * Transcribing a .mp3 file into .txt, then mapping it to our dictionary of ASL videos
-* Accomidating both audio and text input
+* Accommodating both audio and text input
 * Creating a clean and easy-to-use UI
 
 ## What we learned
@@ -53,5 +53,5 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * Adding sliders to allow users to control animation speed
 * Creating a model with more humanoid hands
 * Implementing a reverse translation function of ASL to English by using computer recognition and Machine Learning
-* Expanding it into commercial uses (eg. sign language interpreters in classroom, TV shows, etc)
+* Expanding it into commercial uses (eg. sign language interpreters in classrooms, TV shows, etc)
 * We're excited to see where SignWave can go in the future 👋
