@@ -1,15 +1,15 @@
-# SpeechToSign
+# SignWave
 
 An easy-to-use program that transcribes text or audio files into a sign language animation.
 
 ## Inspiration
 
-Given how much society has advanced technologically, the fact that there still isn't enough attention given towards making communication more accesible towards the deaf community is inexcusable. One of our teammate spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SpeechToSign, an accessible and convenient translator from English to American Sign Language (ASL). 
+Given how much society has advanced technologically, the fact that there still isn't enough attention given towards making communication more accesible towards the deaf community is inexcusable. One of our teammate spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SignWave, an accessible and convenient translator from English to American Sign Language (ASL). 
 
 
 ## What it does and how it can be used
 
-SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given and presents an animation of the transcript in sign language and continues to the next step. When a text input is given, the process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed caption, SignWave also extends as an educational tool. Those looking to learn sign language can use SpeechToSign to teach themselves how to sign various phrases using the both the speech-to-sign and text-to-sign functionalities. 
+SignWave can take two types of input: audio files and text. If an audio file is given, SignWave produces a transcript of the words spoken in the audio file. If a text input is given, the above process is bypassed and the program produces an animation of the text in sign language. While useful as a sign language equivalent of closed caption, SignWave also extends as an educational tool. Those looking to learn sign language can use SignWave to teach themselves how to sign various phrases using the both the speech-to-sign and text-to-sign functionalities. 
 
 
 ## Install
@@ -49,7 +49,7 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * Using [three.js](https://threejs.org/) to animate the set of points
 * Using HTML, CSS, JS, and Git to create a website and repository
 
-## What's next for SpeechToSign
+## What's next for SignWave
 * Adding sliders to allow users to control animation speed
 * Creating a model with more humanoid hands
 * Implementing a reverse translation function of ASL to English by using computer recognition and Machine Learning
