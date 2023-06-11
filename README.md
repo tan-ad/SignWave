@@ -35,7 +35,7 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 
 ## Accomplishments that we're proud of
 
-* Creating a 2d model that accurately maps the movements of both hands
+* Creating a 3D model that accurately maps the movements of both hands
 * Transcribing a .mp3 file into .txt, then mapping it to our dictionary of ASL videos
 * Accommodating both audio and text input
 * Creating a clean and easy-to-use UI
