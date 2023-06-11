@@ -26,12 +26,18 @@ Requirements:
 
 Instructions:
 1. Clone the repository
-```$ git clone https://github.com/tan-ad/SignWave.git```
+```
+$ git clone https://github.com/tan-ad/SignWave.git
+```
 3. Set up Python virtual environment  
-```$ python -m venv myenv```
+```
+$ python -m venv myenv
+```
 4. Install required dependencies
 5. Run the ```app.py``` file
-```$ python app.py```
+```
+$ python app.py
+```
 
 ## How we built it
 
