@@ -78,3 +78,9 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * Implementing a reverse translation function of ASL to English by using computer recognition and Machine Learning
 * Expanding it into commercial uses (eg. transcribing university lectures for deaf or hard-of-hearing students, captioning for TV shows, etc)
 * We're excited to see where SignWave can go in the future 👋
+
+## Contact us
+* Andrew Gordienko (gordienko.adg@gmail.com)
+* Julian Zhang (juleoan123@gmail.com)
+* Rally Lin (linrally@gmail.com)
+* Adrian Tang (tanad@utschools.ca)
