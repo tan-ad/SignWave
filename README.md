@@ -21,8 +21,9 @@ Requirements:
 
 Instructions:
 1. Clone the repository
-2. Set up Python virtual environment and install required dependencies
-3. Run the main ```app.py``` file
+2. Set up Python virtual environment 
+3. Install required dependencies
+4. Run ```python app.py``` 
 
 ## How we built it
 
@@ -50,10 +51,10 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 
 ## What we learned
 
-* How to use OpenAI's [Whisper API]() to convert speech to text
+* How to use OpenAI's [Whisper API](https://openai.com/research/whisper) to convert speech to text
 * Using Python scripts to convert the .txt file into a list of unique strings
 * Using Google's [MediaPipe Hand Landmarker](https://www.handspeak.com/word/) to retried the coordinates of each hand
-* Using the ASL Dictionary to map each word to an array of coordinates
+* Using the [ASL Dictionary](https://www.handspeak.com/word/) to map each word to an array of coordinates
 * Using [three.js](https://threejs.org/) to animate the set of points
 * Using HTML, CSS, JS, and Git to create a website and repository
 
