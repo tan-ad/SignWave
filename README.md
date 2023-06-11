@@ -6,6 +6,7 @@ An easy-to-use program that transcribes text or audio files into a sign language
 
 Given how much society has advanced technologically, the fact that there still isn't enough attention given to making communication more accessible for the deaf community is inexcusable. One of our teammates spoke of his first-hand experience with this issue, as his grandfather is a deaf individual who communicates primarily through sign language and visual cues.  That's when we had the idea of automating translation to sign language, similar to closed captions on videos. As a result, we have created SignWave, an accessible and convenient translator from English to American Sign Language (ASL). 
 
+![image](https://github.com/tan-ad/SignWave/assets/42822671/d652e45e-f72d-475f-bb8c-a04ea8631dc6)
 
 ## What it does and how it can be used
 
