@@ -1,5 +1,7 @@
 # SignWave
 
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
+
 An easy-to-use program that transcribes text or audio files into a sign language animation.
 
 ![image](https://github.com/tan-ad/SignWave/assets/42822671/d652e45e-f72d-475f-bb8c-a04ea8631dc6)
