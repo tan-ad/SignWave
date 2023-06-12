@@ -42,10 +42,9 @@ $ python app.py
 ## How we built it
 
 Our program has three main steps: 
-* Convert audio to text
+* Convert audio to text (when converting text-to-sign, this is skipped)
 * Find what movement corresponds to each word
 * Animate the movement
-Note: when converting text-to-sign, the first step is skipped.
 
 We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize and convert speech to text. Once in text form, we used [ASL Sign Language Dictionary](https://www.handspeak.com/word/) to collect video demonstrations of various words in sign language. For each video, we tracked the hand joints using [MediaPipe Hand Landmarker](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker), which gave us the 3D coordinate of each hand joint at each frame of the video. We then created a dictionary, mapping each word to a multidimensional array of coordinates. This then allows us to use three.js to animate the hands as a set of points and edges. Finally, we wrapped it all together into a pleasant and usable interface using HTML, JS, and CSS. 
 
