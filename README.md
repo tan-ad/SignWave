@@ -22,7 +22,7 @@ Requirements:
 * System: Python (3.11.4)
 * Speech-to-text: PyTorch (2.0.1), ffmpeg (6.0), openai-whisper (beta) 
 * Animation: NumPy (1.21.0),  mediapipe (0.8.9.1)
-* Misc: Flask (2.3.2), Levenstein (0.2.1), regex (2023.6.3), opencv-python (4.5.5.61)
+* Misc: Flask (2.3.2), Levenshtein (0.2.1), regex (2023.6.3), opencv-python (4.5.5.61)
 
 Instructions:
 1. Clone the repository
