@@ -82,4 +82,4 @@ We used OpenAI's [Whisper API](https://openai.com/research/whisper) to recognize
 * Andrew Gordienko (gordienko.adg@gmail.com)
 * Julian Zhang (juleoan123@gmail.com)
 * Rally Lin (linrally@gmail.com)
-* Adrian Tang (tanad@utschools.ca)
+* Adrian Tang (adrian.s.tang@gmail.com)
